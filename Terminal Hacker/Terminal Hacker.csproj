@@ -226,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Hacker.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Room.cs" />
+    <Compile Include="Assets\Scripts\RoomNavigation.cs" />
     <Compile Include="Assets\WM2000\Display\Display.cs" />
     <Compile Include="Assets\WM2000\Keyboard\Keyboard.cs" />
     <Compile Include="Assets\WM2000\Terminal\DisplayBuffer.cs" />

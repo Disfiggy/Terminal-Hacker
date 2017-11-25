@@ -70,7 +70,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4027389112089032}
-  - component: {fileID: 114078456311783532}
+  - component: {fileID: 114294311762390800}
+  - component: {fileID: 114249465520385194}
   m_Layer: 0
   m_Name: WM2000
   m_TagString: Untagged
@@ -430,7 +431,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114078456311783532
+--- !u!114 &114249465520385194
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -438,9 +439,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1744407292189834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727ac2bfaa49bd149a750b6095d8ff87, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e30276e3850dff409f5447b822883ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRoom: {fileID: 11400000, guid: f3b8a8f64504ebc4b88cf7b37b6a23b5, type: 2}
 --- !u!114 &114273428477507666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,6 +470,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114294311762390800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1744407292189834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e5bbda37d518a4986a0de533b088de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: {fileID: 114800869134824038}
+  roomNavigation: {fileID: 0}
 --- !u!114 &114399372335518172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -762,7 +777,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783196620332798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.5, y: -4.200012, z: 0}
+  m_LocalPosition: {x: -7.799988, y: -4.200012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224308848339698518}
@@ -770,6 +785,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.5, y: -4.2}
-  m_SizeDelta: {x: 1642, y: 1102.5}
+  m_AnchoredPosition: {x: -7.8, y: -4.2}
+  m_SizeDelta: {x: 1609.4, y: 1102.5}
   m_Pivot: {x: 0.5, y: 0.5}

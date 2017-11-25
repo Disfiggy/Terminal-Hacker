@@ -6,9 +6,25 @@ public class Hacker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        MainStoryIntroduction();
+        GameMainMenu();
     }
 	
+    void GameMainMenu ()
+    {
+        Terminal.WriteLine("                     == ADVENTURES ON XANION ==");
+        Terminal.WriteLine(" ");
+        Terminal.WriteLine(" ");
+        Terminal.WriteLine("=====================================================================");
+        Terminal.WriteLine("=                       CHOOSE YOUR ADVENTURE                       =");
+        Terminal.WriteLine("=====================================================================");
+        Terminal.WriteLine("");
+        Terminal.WriteLine("");
+        Terminal.WriteLine("");
+        Terminal.WriteLine("                      [ - Difficulty Easy -   ]");
+        Terminal.WriteLine("                      [ - Difficulty Medium - ]");
+        Terminal.WriteLine("                      [ - Difficulty Hard -   ]");
+    }
+
     void MainStoryIntroduction ()
     {
         Terminal.WriteLine("Hello fellow traveler.");
@@ -20,6 +36,29 @@ public class Hacker : MonoBehaviour {
         Terminal.WriteLine("The sun is going to be setting in a few hours and after that the environment will most likely become uninhabitable for any human");
         Terminal.WriteLine(" ");
         Terminal.WriteLine("Would you like to continue forward? (Y/N)");
+    }
+
+    void OnUserInput(string input)
+    {
+        if (input == "Easy")
+        {
+            Terminal.ClearScreen();
+            MainStoryIntroduction();
+        }
+        else if (input == "Medium")
+        {
+            Terminal.ClearScreen();
+            MainStoryIntroduction();
+        }
+        else if (input == "Hard")
+        {
+            Terminal.ClearScreen();
+            MainStoryIntroduction();
+        }
+        else
+        {       
+            Terminal.WriteLine("Please Choose a Valid Adventure Fellow Traveler");
+        }
     }
 
 	// Update is called once per frame
