@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     public Text displayText;
+    public InputAction[] inputActions;
 
     [HideInInspector] public RoomNavigation roomNavigation;
+    [HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string>();
 
     List<string> actionLog = new List<string>();
 
@@ -32,13 +34,30 @@ public class GameController : MonoBehaviour {
 
     public void DisplayRoomText()
     {
-        string CombinedText = roomNavigation.currentRoom.description + "\n";
+        ClearCollectionsForNewRoom();
+
+        UnpackRoom ();
+
+        string JoinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInRoom.ToArray());
+
+        string CombinedText = roomNavigation.currentRoom.description + "\n" + JoinedInteractionDescriptions;
 
         LogStringWithReturn(CombinedText);
 
         Terminal.WriteLine(CombinedText);
     }
+
+    void UnpackRoom()
+    {
+        roomNavigation.UnpackExitsInRoom ();
+    }
 	
+    void ClearCollectionsForNewRoom()
+    {
+        interactionDescriptionsInRoom.Clear();
+        roomNavigation.ClearExits();
+    }
+
     public void LogStringWithReturn(string stringToAdd)
     {
         actionLog.Add(stringToAdd + "\n");
