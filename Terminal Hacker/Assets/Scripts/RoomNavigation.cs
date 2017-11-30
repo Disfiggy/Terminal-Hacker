@@ -27,8 +27,8 @@ public class RoomNavigation : MonoBehaviour {
     {
         if (exitDictionary.ContainsKey(directionNoun))
         {
-            currentRoom = exitDictionary[directionNoun];
-            controller.LogStringWithReturn("You haed off to the " + directionNoun);
+            currentRoom = exitDictionary [directionNoun];
+            controller.LogStringWithReturn("You head off to the " + directionNoun);
             controller.DisplayRoomText();
         }
         else

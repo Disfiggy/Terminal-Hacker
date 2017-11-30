@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour {
 
+    GameController controller;
+
 	// Use this for initialization
-	void Start () {
-        GameMainMenu();
+	void Awake () {
+        controller = GetComponent<GameController>();
     }
 	
     void GameMainMenu ()
@@ -40,24 +42,16 @@ public class Hacker : MonoBehaviour {
 
     void OnUserInput(string input)
     {
-        if (input == "Easy")
+        char[] delimiterCharacters = { ' ' };
+        string[] seperatedInputWords = input.Split(delimiterCharacters);
+
+        for (int i = 0; i < controller.inputActions.Length; i++)
         {
-            Terminal.ClearScreen();
-            MainStoryIntroduction();
-        }
-        else if (input == "Medium")
-        {
-            Terminal.ClearScreen();
-            MainStoryIntroduction();
-        }
-        else if (input == "Hard")
-        {
-            Terminal.ClearScreen();
-            MainStoryIntroduction();
-        }
-        else
-        {       
-            Terminal.WriteLine("Please Choose a Valid Adventure Fellow Traveler");
+            InputAction inputAction = controller.inputActions[i];
+            if (inputAction.keyWord == seperatedInputWords[0] && seperatedInputWords.Length > 1)
+            {
+                inputAction.RespondToInput(controller, seperatedInputWords);
+            }
         }
     }
 

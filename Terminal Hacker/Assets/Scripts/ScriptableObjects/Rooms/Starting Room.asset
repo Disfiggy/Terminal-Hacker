@@ -14,9 +14,6 @@ MonoBehaviour:
   description: This is the place where the player initially starts.
   roomName: Gate Area
   exits:
-  - keyString: Sand Worm
+  - keyString: sandworm
     exitDescription: You see a Sand Worm reaching from the ground in the distance
     valueRoom: {fileID: 11400000, guid: 4619b678005daab41b691b5eede2b495, type: 2}
-  - keyString: 
-    exitDescription: 
-    valueRoom: {fileID: 0}

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName= "TextAdventure/InputActions/Go")]
-public abstract class Go : InputAction
+[CreateAssetMenu(menuName = "CyberpunkAdventure/ActionInput/Go")]
+public class Go : InputAction
 {
     public override void RespondToInput(GameController controller, string[] seperatedInputWords)
     {
-        controller.roomNavigation.AttemptToChangeRooms(seperatedInputWords[1]);
+        controller.roomNavigation.AttemptToChangeRooms(seperatedInputWords [1]);
     }
 
 }
